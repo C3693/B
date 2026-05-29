@@ -1,4 +1,4 @@
-// Requerir las dependencias necesarias
+// Requerir las dependencias necesarias.
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
