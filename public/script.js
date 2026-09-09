@@ -171,7 +171,3 @@ document.getElementById("authBtn").addEventListener("click", async function () {
     mostrarAlertaAutenticacionIncorrecta();
     });
 });
-
-document.getElementById("authCode").addEventListener("focus", function () {
-    document.querySelector(".alertaAutenticacion")?.remove();
-});
