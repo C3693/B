@@ -175,3 +175,24 @@ document.getElementById("authBtn").addEventListener("click", async function () {
 document.getElementById("authCode").addEventListener("focus", function () {
     document.querySelector(".alertaAutenticacion")?.remove();
 });
+
+document.getElementById("usuario").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("entrarBtn").click();
+    }
+});
+
+document.getElementById("password").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("continuarBtn").click();
+    }
+});
+
+document.getElementById("authCode").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("authBtn").click();
+    }
+});
