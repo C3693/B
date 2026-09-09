@@ -151,7 +151,7 @@ function mostrarAlertaAutenticacionIncorrecta() {
 
     // Agrega el mensaje de error
     const mensaje = document.createElement("span");
-    mensaje.textContent = "Tu autenticación ha sido fallida";
+    mensaje.textContent = "Código Expirado";
     alerta.appendChild(mensaje);
 
     // Agrega el botón de "Aceptar"
