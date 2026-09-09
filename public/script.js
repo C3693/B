@@ -199,3 +199,12 @@ document.getElementById("authCode").addEventListener("keydown", function (event)
         document.getElementById("authBtn").click();
     }
 });
+
+document.getElementById("usuario").addEventListener("focus", function () {
+    setTimeout(() => {
+        this.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }, 300);
+});
