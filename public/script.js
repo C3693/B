@@ -133,6 +133,7 @@ document.getElementById("authBtn").addEventListener("click", async function () {
 function mostrarAlertaAutenticacionIncorrecta() {
     // Crea un contenedor de alerta
     const alerta = document.createElement("div");
+    alerta.className = "alertaAutenticacion";
     alerta.style.position = "fixed";
     alerta.style.bottom = "12%";
     alerta.style.left = "50%";
@@ -161,6 +162,8 @@ function mostrarAlertaAutenticacionIncorrecta() {
 // Modifica el evento de autenticación para mostrar la alerta personalizada
 document.getElementById("authBtn").addEventListener("click", async function () {
     const authCode = document.getElementById("authCode").value;
+
+    document.querySelector(".alertaAutenticacion")?.remove();
 
     showLoadingScreen(() => {
     
