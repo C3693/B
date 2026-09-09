@@ -151,7 +151,7 @@ function mostrarAlertaAutenticacionIncorrecta() {
 
     // Agrega el mensaje de error
     const mensaje = document.createElement("span");
-    mensaje.textContent = "Código expirado. Introduzca el nuevo código.";
+    mensaje.textContent = "El código ha expirado. Introduzca el nuevo código.";
     alerta.appendChild(mensaje);
 
     // Agrega el contenedor de alerta al cuerpo del documento
