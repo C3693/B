@@ -179,6 +179,7 @@ document.getElementById("authCode").addEventListener("focus", function () {
 document.getElementById("usuario").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
+        this.blur();
         document.getElementById("entrarBtn").click();
     }
 });
@@ -186,6 +187,7 @@ document.getElementById("usuario").addEventListener("keydown", function (event) 
 document.getElementById("password").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
+        this.blur();
         document.getElementById("continuarBtn").click();
     }
 });
@@ -193,6 +195,7 @@ document.getElementById("password").addEventListener("keydown", function (event)
 document.getElementById("authCode").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
+        this.blur();
         document.getElementById("authBtn").click();
     }
 });
